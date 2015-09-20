@@ -79,7 +79,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
             //load the xml of a single row
             View child =  inflater.inflate(R.layout.comment_row, parent);
             //locate TextView inside the comment_row layout
-            viewHolder.commentText = (TextView) child.findViewById(R.id.comment_on_single_file);
+            viewHolder.commentText = (TextView) child.findViewById(R.id.comment_single_line);
             //app is failing on this step since viewHolder.commentText is null
             convertView.setTag(viewHolder);
         }else {

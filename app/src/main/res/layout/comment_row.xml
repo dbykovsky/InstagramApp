@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="user name"
-        android:layout_below="@+id/comment_on_single_file"
+        android:layout_below="@+id/comment_single_line"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:maxLines="2"
