@@ -45,7 +45,7 @@ public class PhotosActivity extends Activity {
 
     public void fetchPopularData(){
 
-        String url =  "https://api.instagram.com/v1/media/popular?client_id="+CLIENT_ID;
+            String url =  "https://api.instagram.com/v1/media/popular?client_id="+CLIENT_ID;
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(url, null, new JsonHttpResponseHandler(){
 
@@ -71,12 +71,13 @@ public class PhotosActivity extends Activity {
 
                         //populate comment model
                         JSONArray commentJson = photoJson.getJSONObject(i).getJSONObject("comments").getJSONArray("data");
-                        for(int j=0; i<commentJson.length(); i++){
+                        for(int j=0; j<commentJson.length(); j++){
                             Comment comment = new Comment();
+
                             comment.setComment(commentJson.getJSONObject(j).getString("text"));
                             comment.setCommenterName(commentJson.getJSONObject(j).getJSONObject("from").getString("username"));
                             comment.setCommenterPic(commentJson.getJSONObject(j).getJSONObject("from").getString("profile_picture"));
-                            comment.setCommenterPic(commentJson.getJSONObject(j).getString("created_time"));
+                            comment.setTimeStamp(Long.parseLong(commentJson.getJSONObject(j).getString("created_time")));
                             comments.add(comment);
                         }
                         photo.setComments(comments);

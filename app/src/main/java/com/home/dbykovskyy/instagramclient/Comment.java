@@ -1,22 +1,26 @@
 package com.home.dbykovskyy.instagramclient;
 
+import java.io.Serializable;
+
 /**
  * Created by dbykovskyy on 9/19/15.
  */
-public class Comment {
+public class Comment implements Serializable {
 
     private String comment;
     private String commenterName;
     private String commenterPic;
-    private String timeStamp;
 
-    public String getTimeStamp() {
+    public Long getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(String timeStamp) {
+    public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
+
+    private Long timeStamp;
+
 
     public String getCommenterPic() {
         return commenterPic;
@@ -41,4 +45,5 @@ public class Comment {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
 }

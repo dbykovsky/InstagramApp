@@ -133,15 +133,17 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
+            android:ellipsize="end"
             android:maxLines="3" />
 
     </RelativeLayout>
 
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/comment_container"
+        android:orientation="vertical"
         android:paddingLeft="5dp"
         android:layout_below="@+id/likes_container"
         >
@@ -150,11 +152,6 @@
             android:id="@+id/list_of_comments"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="I'm a single comment"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-
             />
 
     </LinearLayout>
