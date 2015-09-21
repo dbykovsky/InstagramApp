@@ -30,6 +30,9 @@
         android:text="Time stamppppp"
         android:id="@+id/tv_time_stamp"
         android:layout_alignParentLeft="true"
+        android:textColor="@color/instagram_grey"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="30dp"
         android:layout_below="@+id/tv_user_name"
  />
 
