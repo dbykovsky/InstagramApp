@@ -181,14 +181,8 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getContext(), PostCommentsActivity.class);
-
                 myIntent.putExtra("comments", photo.getComments());
-
                 getContext().startActivity(myIntent);
-
-
-
-
             }
         });
 
@@ -219,7 +213,6 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
         if(comments.size()==0){
             return twoLatestComments;
         }
-
         Collections.sort(comments, new Comparator<Comment>() {
             @TargetApi(Build.VERSION_CODES.KITKAT)
             @Override
@@ -233,9 +226,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
         if(comments.size()>1){
             twoLatestComments.put(2, comments.get(comments.size()-2));
         }
-
         return twoLatestComments;
-
     }
 
 }
