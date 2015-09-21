@@ -148,11 +148,6 @@
         android:layout_below="@+id/likes_container"
         >
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/list_of_comments"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            />
 
     </LinearLayout>
 
